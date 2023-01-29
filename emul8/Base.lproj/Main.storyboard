@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Display View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DisplayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Nv-Dq-aXW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MG7-HE-UaL">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Bcm-Cb-kyp" appends="YES" id="Zj6-2K-byY"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSF-rg-qPd">
+                                        <rect key="frame" x="300" y="0.0" width="300" height="600"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="DVm-RX-DZR" appends="YES" id="nMH-kE-xb3"/>
+                                        </connections>
+                                    </view>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkP-07-NPT" customClass="C8DisplayView">
+                                        <rect key="frame" x="44" y="172" width="512" height="256"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="512" id="HvN-Mf-JbN"/>
+                                            <constraint firstAttribute="height" constant="256" id="P58-Vq-K1L"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="VSF-rg-qPd" firstAttribute="trailing" secondItem="0Nv-Dq-aXW" secondAttribute="trailing" id="EAp-ME-NIM"/>
+                                    <constraint firstItem="MG7-HE-UaL" firstAttribute="centerY" secondItem="0Nv-Dq-aXW" secondAttribute="centerY" id="LE6-qH-way"/>
+                                    <constraint firstItem="DkP-07-NPT" firstAttribute="centerY" secondItem="0Nv-Dq-aXW" secondAttribute="centerY" id="MyQ-g3-hW5"/>
+                                    <constraint firstItem="VSF-rg-qPd" firstAttribute="width" secondItem="0Nv-Dq-aXW" secondAttribute="width" multiplier="0.5" id="Q29-8o-I1a"/>
+                                    <constraint firstItem="DkP-07-NPT" firstAttribute="centerX" secondItem="0Nv-Dq-aXW" secondAttribute="centerX" id="QpM-JG-Str"/>
+                                    <constraint firstItem="VSF-rg-qPd" firstAttribute="height" secondItem="0Nv-Dq-aXW" secondAttribute="height" id="Wgc-kU-kZq"/>
+                                    <constraint firstItem="MG7-HE-UaL" firstAttribute="leading" secondItem="0Nv-Dq-aXW" secondAttribute="leading" id="bVU-1b-dgL"/>
+                                    <constraint firstItem="MG7-HE-UaL" firstAttribute="width" secondItem="0Nv-Dq-aXW" secondAttribute="width" multiplier="0.5" id="eEN-d0-D4K"/>
+                                    <constraint firstItem="MG7-HE-UaL" firstAttribute="height" secondItem="0Nv-Dq-aXW" secondAttribute="height" id="rgy-s7-T6h"/>
+                                    <constraint firstItem="VSF-rg-qPd" firstAttribute="centerY" secondItem="0Nv-Dq-aXW" secondAttribute="centerY" id="xku-VT-h51"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3tb-3r-jcK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="N9u-oI-66L"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Db0-dY-9cy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="3tb-3r-jcK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3xu-s2-21l"/>
+                            <constraint firstItem="0Nv-Dq-aXW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LU6-gD-EQz"/>
+                            <constraint firstItem="3tb-3r-jcK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="LiL-QV-mv7"/>
+                            <constraint firstItem="0Nv-Dq-aXW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="MaM-OY-cKh"/>
+                            <constraint firstItem="0Nv-Dq-aXW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lwA-Wr-rWk"/>
+                            <constraint firstItem="0Nv-Dq-aXW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="v65-gk-I2Z"/>
+                            <constraint firstItem="3tb-3r-jcK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="xHy-io-WOC"/>
+                            <constraint firstItem="3tb-3r-jcK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yGb-82-VE1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_display" destination="DkP-07-NPT" id="ktK-WA-I6G"/>
+                        <outlet property="_emuContainer" destination="0Nv-Dq-aXW" id="mfi-03-QYT"/>
+                        <outlet property="_recog1" destination="Bcm-Cb-kyp" id="KE1-aK-6m7"/>
+                        <outlet property="_recog2" destination="DVm-RX-DZR" id="KuL-JO-bn8"/>
+                        <outlet property="_romListView" destination="3tb-3r-jcK" id="GNg-Ap-AHD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10000" minimumPressDuration="0.0" id="Bcm-Cb-kyp">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="6d1-Df-zTg"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10000" minimumPressDuration="0.0" id="DVm-RX-DZR">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="CpN-w4-zjC"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="284" y="290"/>
+        </scene>
+    </scenes>
+</document>

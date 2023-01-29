@@ -1,0 +1,3 @@
+[submodule "emul8/emu"]
+	path = emul8/emu
+	url = git@github.com:Noeliel/emul8-core.git
